@@ -2,11 +2,11 @@
 
 This is a aggregated Social Feed app for consuming Twitter and Facebook in a single timeline.
 
-Time spent: `<Number of hours spent>`
+Time spent: `6 hours`
 
 ### Features
 
-#### Required
+#### Required (all features are there, but blocked due to Auth being stuck, working with Adam to get this unblocked)
 
 - [ ] User can sign in and connect to Twitter using `passport`.
 - [ ] User can view the 20 latest entries on an aggregated timeline.
