@@ -6,7 +6,7 @@ Time spent: `8 hours`
 
 ### Features
 
-#### Required (all features are there, but blocked due to Auth being stuck, working with Adam to get this unblocked)
+#### Required
 
 - [x] User can sign in and connect to Twitter using `passport`.
 - [x] User can view the 20 latest entries on an aggregated timeline.
@@ -32,7 +32,7 @@ Time spent: `8 hours`
 
 ### Walkthrough
 
-![Video Walkthrough](socialfeed-assignment.gif)
+![Video Walkthrough](nodejs-socialfeed.gif)
 
 
 
