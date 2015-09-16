@@ -1,16 +1,11 @@
 let mongoose = require('mongoose')
+let _ = require('lodash')
 
 let userSchema = mongoose.Schema({
   // userModel properties here...
   local: {
-    email: {
-      type: String,
-      required: true
-    },
-    password: {
-      type: String,
-      required: true
-    }
+    email: String,
+    password: String
   },
   twitter: {
     id: String,

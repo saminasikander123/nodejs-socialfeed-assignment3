@@ -104,13 +104,15 @@ module.exports = (app) => {
   })
 
   app.post('/compose', isLoggedIn, then(async (req, res) => {
-      let text = req.body.reply
+      let text = req.body.reply   // req.query.text
       if (text.length > 140)  {
+					//console.log(1)
           req.flash('error', 'Status is over 140 characters')
           res.redirect('/compose')
           return
       }
       if (!text){
+					//console.log(2)
           req.flash('error', 'Status cannot be empty')
           res.redirect('/compose')
           return
@@ -121,8 +123,12 @@ module.exports = (app) => {
           access_token_key: req.user.twitter.token,
           access_token_secret: req.user.twitter.secret
       })
-      await twitterClient.promise.post('/statuses/update', {status: text})
-      res.redirect('/timeline')
+			try {
+	      await twitterClient.promise.post('/statuses/update', {status: text})
+	      res.redirect('/timeline')
+			} catch(e) {
+				console.log(e.stack)
+			}
   }))
 
   app.post('/like/:id', isLoggedIn, then(async(req, res) => {
